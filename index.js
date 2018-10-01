@@ -1,6 +1,7 @@
 const express = require("express");
 
 const app = express();
+const port = process.env.PORT || 3000
 
 app.use("/api/:code", (req, res, end) => {
     console.log("hai")
@@ -9,6 +10,6 @@ app.use("/api/:code", (req, res, end) => {
     res.send()
 })
 
-app.listen(3000, () => {
-    console.log("App started")
+app.listen(port, () => {
+    console.log("App started in port " + port)
 })
